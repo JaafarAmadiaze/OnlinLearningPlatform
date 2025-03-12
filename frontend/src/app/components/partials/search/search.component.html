@@ -1,0 +1,14 @@
+<div class="search-container">
+    <input
+        #s
+        type="text"
+        placeholder="Search for courses"
+        (keyup.enter)="search(s.value)"
+        [value]="searchTerm"
+        class="search-input"
+        aria-label="Search for courses"
+    />
+    <button class="search-button" (click)="search(s.value)">
+        <span class="search-icon">&#128269;</span> <!-- Unicode for magnifying glass -->
+    </button>
+</div>

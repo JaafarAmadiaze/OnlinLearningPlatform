@@ -1,0 +1,18 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]="!courses || !courses.length" resetLinkText="Reset Search" ></app-not-found>
+<ul>
+    <li *ngFor="let course of courses">
+        <a [routerLink]="['/course', course.id]">
+            <div class="course-container">
+                <img [src]="course.ImageUrl" alt="{{ course.title }}" class="course-image" />
+                <div class="course-content">
+                    <h2>{{ course.title }}</h2>
+                    <div class="description">
+                        {{ course.description }}
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>

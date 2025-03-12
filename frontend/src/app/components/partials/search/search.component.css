@@ -1,0 +1,56 @@
+/* Container for the search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 500px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the search bar */
+    border: 2px solid #ccc;
+    border-radius: 25px; /* Rounded corners */
+    overflow: hidden; /* Ensures the button stays inside the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the container */
+.search-container:hover {
+    border-color: #007bff; /* Change border color on hover */
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); /* Enhance shadow on hover */
+}
+
+/* Input field */
+.search-input {
+    flex: 1; /* Takes up remaining space */
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+/* Placeholder text */
+.search-input::placeholder {
+    color: #999;
+}
+
+/* Search button */
+.search-button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.search-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Search icon inside the button */
+.search-icon {
+    font-size: 18px;
+}
+.search-input:focus {
+    border-color: #007bff; /* Highlight the input when focused */
+}

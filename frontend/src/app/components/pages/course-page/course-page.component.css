@@ -1,0 +1,124 @@
+/* Course Page Container */
+.course-page {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Header */
+.course-header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.course-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.course-meta .duration,
+.course-meta .category {
+  margin-right: 0.5rem;
+}
+
+/* Course Image */
+.course-image {
+  text-align: center; /* Center the image */
+  margin-bottom: 1rem;
+}
+
+.course-image img {
+  width: 50%; /* Make the image smaller */
+  max-width: 200px; /* Optional: Set a maximum width */
+  border-radius: 8px;
+}
+
+/* Course Description */
+.course-description p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Course Tags */
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-tags .tag {
+  padding: 0.25rem 0.75rem;
+  background-color: #e9ecef;
+  color: #333;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* Course Details */
+.course-details {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.course-details p {
+  margin: 0.25rem 0;
+}
+
+.course-details strong {
+  color: #333;
+}
+
+/* Style général pour les boutons */
+.back-link button {
+  display: inline-block;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour le bouton "Back to Courses" */
+.back-link button[routerLink="/"] {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.back-link button[routerLink="/"]:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 117, 252, 0.3);
+}
+
+/* Style pour le bouton "Add to Cart" */
+.back-link button[routerLink="/cart-page"] {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+}
+
+.back-link button[routerLink="/cart-page"]:hover {
+  background: linear-gradient(135deg, #81c784, #4caf50);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Effet actif (au clic) */
+.back-link button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

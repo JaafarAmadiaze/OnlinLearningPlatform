@@ -1,0 +1,58 @@
+/* Style général pour la notification */
+.notification {
+    padding: 20px;
+    background-color: #fff3cd; /* Fond jaune clair pour un effet d'avertissement */
+    border: 1px solid #ffeeba; /* Bordure jaune */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Animation d'apparition */
+}
+
+/* Style pour le message */
+.notification .message {
+    font-size: 1.1rem;
+    color: #856404; /* Couleur de texte sombre pour contraste */
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+
+/* Style pour le lien de réinitialisation */
+.notification .reset-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Dégradé violet-bleu */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notification .reset-link:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb); /* Dégradé inversé au survol */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 117, 252, 0.3);
+}
+
+.notification .reset-link:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

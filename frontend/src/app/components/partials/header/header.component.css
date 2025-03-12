@@ -1,0 +1,108 @@
+/* Style général pour l'en-tête */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #553875, #2575fc); /* Dégradé violet-bleu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Style pour le logo */
+.logo .logo-image {
+  height: 50px; /* Ajustez la taille du logo */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo .logo-image:hover {
+  transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+/* Style pour la barre de navigation */
+.navbar .nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-item {
+  margin-left: 20px;
+  position: relative;
+}
+
+/* Style pour les liens de navigation */
+.navbar .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent au survol */
+  color: #ffdd57; /* Couleur de texte jaune au survol */
+}
+
+/* Style pour le badge du panier */
+.navbar .nav-link span {
+  background-color: #ff4b2b; /* Fond rouge pour le badge */
+  color: white;
+  padding: 3px 8px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  margin-left: 5px;
+  animation: bounce 0.5s ease-in-out; /* Animation du badge */
+}
+
+/* Animation pour le badge du panier */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+/* Effet de soulignement au survol */
+.navbar .nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffdd57; /* Couleur jaune pour le soulignement */
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-item:hover::after {
+  width: 100%; /* Soulignement complet au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .navbar .nav-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar .nav-item {
+      margin: 10px 0;
+  }
+}

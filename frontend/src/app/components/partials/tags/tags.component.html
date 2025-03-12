@@ -1,0 +1,10 @@
+<div class="tags-container">
+    <a
+      *ngFor="let tag of tags"
+      [routerLink]="['/tag', tag.name]"
+      class="tag"
+      [ngClass]="{ active: isTagActive(tag.name) }"
+    >
+      {{ tag.name }} ({{ tag.count }})
+    </a>
+  </div>

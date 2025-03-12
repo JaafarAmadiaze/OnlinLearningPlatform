@@ -1,0 +1,49 @@
+<app-not-found [visible]="!course?.id" notFoundMessage="Course Not Found"></app-not-found>
+
+
+<div  *ngIf="course" class="course-page">
+
+    <!-- Course Header -->
+    <div  class="course-header">
+      <h1>{{ course.title }}</h1>
+      <p class="course-meta">
+        <span class="duration">{{ course.duration }} hours</span> 
+      </p>
+    </div>
+
+    <!-- Course Image -->
+    <div class="course-image">
+      <img [src]="course.ImageUrl" [alt]="course.title || 'Course Image'" />
+    </div>
+
+    <!-- Course Description -->
+    <div class="course-description">
+      <p>{{ course.description }}</p>
+    </div>
+
+    <!-- Course Tags -->
+    <div class="course-tags">
+      <span *ngFor="let tag of course.tags" class="tag">{{ tag }}</span>
+    </div>
+
+    <!-- Course Price -->
+    <div class="course-price">
+      <p><strong>Price:</strong>{{ course.price }}</p>
+
+    <!-- Additional Details -->
+    <div class="course-details">
+      <p><strong>Created:</strong> {{ course.created_at | date }}</p>
+      <p><strong>Course ID:</strong> {{ course.course_id }}</p>
+    </div>
+
+    <!-- Back to Courses Link -->
+    <div class="back-link">
+      <button type="button" routerLink="/">Back to Courses</button>
+    </div>
+
+    <!-- Course Lessons -->
+     <div class="back-link">
+     <button type="button" (click)="addToCart()" routerLink="/cart-page">Add to Cart</button>
+     </div>
+
+  </div>

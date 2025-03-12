@@ -1,0 +1,57 @@
+/* Style for the list */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 20px; /* Add padding to the list */
+    margin-top: 20px; /* Add spacing at the top */
+}
+
+/* Style for each course item */
+.course-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center align items */
+    margin-bottom: 20px; /* Add spacing between courses */
+    padding: 10px; /* Add padding for better spacing */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Add rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the course container */
+.course-container:hover {
+    background-color: #f9f9f9; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+    transform: translateY(-2px); /* Slightly lift the item on hover */
+    border-color: #007bff; /* Change border color on hover */
+}
+
+/* Style for the course image */
+.course-image {
+    width: 100px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add spacing between image and content */
+    border-radius: 8px; /* Add rounded corners to the image */
+}
+
+/* Style for the course content */
+.course-content {
+    flex: 1; /* Allow the content to take up remaining space */
+}
+
+/* Style for the title */
+h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Increase font size */
+    color: #333; /* Set title color */
+}
+
+/* Style for the description */
+.description {
+    margin-top: 10px; /* Add spacing between title and description */
+    color: #666; /* Set description color */
+    font-size: 1em; /* Set font size */
+}
+
+/* Optional: Add a hover effect to the image */
+.course-image:hover {
+    opacity: 0.9; /* Slightly reduce opacity on hover */
+}
