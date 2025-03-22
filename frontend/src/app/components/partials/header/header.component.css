@@ -1,28 +1,25 @@
-/* Style général pour l'en-tête */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #553875, #2575fc); /* Dégradé violet-bleu */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 1rem 2rem;
+  background-color: #2c3e50; /* Dark blue background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style pour le logo */
-.logo .logo-image {
-  height: 50px; /* Ajustez la taille du logo */
+/* Logo */
+.logo img {
+  height: 50px; /* Adjust logo height */
   width: auto;
   transition: transform 0.3s ease;
 }
 
-.logo .logo-image:hover {
-  transform: scale(1.1); /* Effet de zoom au survol */
+.logo img:hover {
+  transform: scale(1.1); /* Add hover effect */
 }
 
-/* Style pour la barre de navigation */
+/* Navigation Bar */
 .navbar .nav-list {
   display: flex;
   list-style: none;
@@ -31,78 +28,88 @@
 }
 
 .navbar .nav-item {
-  margin-left: 20px;
   position: relative;
+  margin-left: 1.5rem;
 }
 
-/* Style pour les liens de navigation */
+/* Navigation Links */
 .navbar .nav-link {
-  color: white;
+  color: #ecf0f1; /* Light gray text */
   text-decoration: none;
   font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 10px 15px;
-  border-radius: 5px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent au survol */
-  color: #ffdd57; /* Couleur de texte jaune au survol */
+  background-color: #34495e; /* Darker blue on hover */
+  color: #ffffff; /* White text on hover */
 }
 
-/* Style pour le badge du panier */
-.navbar .nav-link span {
-  background-color: #ff4b2b; /* Fond rouge pour le badge */
-  color: white;
-  padding: 3px 8px;
-  border-radius: 50%;
-  font-size: 0.8rem;
-  margin-left: 5px;
-  animation: bounce 0.5s ease-in-out; /* Animation du badge */
-}
-
-/* Animation pour le badge du panier */
-@keyframes bounce {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-5px);
-  }
-}
-
-/* Effet de soulignement au survol */
-.navbar .nav-item::after {
-  content: '';
+/* Dropdown Menu */
+.nav-item .dropdown {
+  display: none;
   position: absolute;
-  bottom: -5px;
+  top: 100%;
   left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ffdd57; /* Couleur jaune pour le soulignement */
-  transition: width 0.3s ease;
+  background-color: #2c3e50; /* Dark blue background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
 }
 
-.navbar .nav-item:hover::after {
-  width: 100%; /* Soulignement complet au survol */
+.nav-item:hover .dropdown {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown .nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #ecf0f1; /* Light gray text */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown .nav-link:hover {
+  background-color: #34495e; /* Darker blue on hover */
+}
+
+/* Cart Icon */
+.nav-item .nav-link span {
+  background-color: #e74c3c; /* Red background for cart quantity */
+  color: #ffffff; /* White text */
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .header {
-      flex-direction: column;
-      padding: 10px;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .navbar .nav-list {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .navbar .nav-item {
-      margin: 10px 0;
+    margin: 0.5rem 0;
+  }
+
+  .nav-item .dropdown {
+    position: static;
+    display: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .nav-item:hover .dropdown {
+    display: block;
   }
 }

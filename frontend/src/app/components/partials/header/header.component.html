@@ -7,11 +7,16 @@
     <li class="nav-item">
       <a routerLink="/" class="nav-link">Home</a>
     </li>
-    <li class="nav-item">
+    <li *ngIf="!isAuth" class="nav-item">
       <a routerLink="login" class="nav-link">Login</a>
     </li>
-    <li class="nav-item">
-      <a routerLink="/contact" class="nav-link">Contact</a>
+    <li *ngIf="isAuth" class="nav-item">
+      <a routerLink="/dashboard" class="nav-link">{{user.name}}</a>
+      <div class="dropdown">
+        <a routerLink="/dashboard" class="nav-link">Dashboard</a>
+        <a routerLink="/orders" class="nav-link">Orders</a>
+        <a  routerLink="/" (click)="logout()" class="nav-link">Logout</a>
+      </div>
     </li>
     <li class="nav-item">
       <a routerLink="/discover" class="nav-link">Discover</a>

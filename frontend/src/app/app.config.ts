@@ -16,6 +16,6 @@ export const appConfig: ApplicationConfig = {
           progressBar: true,
           positionClass: 'toast-bottom-right',
           newestOnTop: false,
-        }) // Toastr configuration
+        })
     ]
 };

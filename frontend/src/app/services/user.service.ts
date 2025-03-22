@@ -6,12 +6,14 @@ import { HttpClient } from '@angular/common/http';
 import { LOGIN_URL } from '../shared/constants/urls';
 import { ToastrService } from 'ngx-toastr';
 
+const USER_KEY='user';
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private userSubject=new BehaviorSubject<User>(new User());
+  private userSubject=new BehaviorSubject<User>(this.getUserFromLocalStorage());
 
   public userObservable:Observable<User>;
 
@@ -24,6 +26,7 @@ export class UserService {
     return  this.http.post<User>(LOGIN_URL,userLogin).pipe(
       tap({
         next:(user)=>{
+          this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success("Welcome "+user.name , "Login Success");
         },
@@ -33,5 +36,22 @@ export class UserService {
       })
     );
   }
+
+  logout(){
+    this.userSubject.next(new User());
+    localStorage.removeItem(USER_KEY);
+    window.location.reload();
+  }
+
+
+private setUserToLocalStorage(user:User){
+  localStorage.setItem(USER_KEY,JSON.stringify(user));
+}
+
+private getUserFromLocalStorage():User{
+  const user=localStorage.getItem(USER_KEY);
+ if(user) return JSON.parse(user) as User;
+ return new User();
+}
 
 }

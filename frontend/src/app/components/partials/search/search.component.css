@@ -13,8 +13,8 @@
 
 /* Hover effect for the container */
 .search-container:hover {
-    border-color: #007bff; /* Change border color on hover */
-    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); /* Enhance shadow on hover */
+    border-color:  #34495e;; /* Change border color on hover */
+    box-shadow: 0 2px 8px rgba(2, 25, 50, 0.771); /* Enhance shadow on hover */
 }
 
 /* Input field */
@@ -36,7 +36,7 @@
 .search-button {
     padding: 12px 20px;
     border: none;
-    background-color: #007bff; /* Blue background */
+    background-color:  #2c3e50;; /* Blue background */
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -44,7 +44,7 @@
 
 /* Hover effect for the button */
 .search-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #34495e; /* Darker blue on hover */
 }
 
 /* Search icon inside the button */
@@ -52,5 +52,5 @@
     font-size: 18px;
 }
 .search-input:focus {
-    border-color: #007bff; /* Highlight the input when focused */
+    border-color: #34495e; /* Highlight the input when focused */
 }
